@@ -12,7 +12,25 @@ public class Cliente {
 		this.idade=idade;
 		this.genero=genero;
 	}
+	public Cliente(){
+		this.nome = "";
+		this.cpf="";
+		this.idade=0;
+		this.genero="";
+	}
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -30,9 +48,9 @@ public class Cliente {
 	}
 	
 	public String toString(){
-		return "nome: " +nome+"\n"
-				+ "cpf: "+cpf+"\n"
-						+ "idade: "+ idade+ "\n"
-								+ "genero: "+genero+"\n";
+		return nome+"/"
+				+cpf+"/"
+						+idade+ "/"
+								+genero;
 	}
 }

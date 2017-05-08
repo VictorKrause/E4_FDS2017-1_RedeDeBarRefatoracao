@@ -67,6 +67,13 @@ public class CheckInCliente extends JFrame {
 		comboBoxGenero.setModel(new DefaultComboBoxModel(new String[] {"Masculino", "Feminino"}));
 
 		txtFieldCPF = new JTextField();
+		txtFieldCPF.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent arg0) {
+				txtFieldMatricula.setText(data.setNumSocio(txtFieldCPF.getText()));
+				
+			}
+		});
 		txtFieldCPF.setColumns(10);
 
 		JLabel lblCpf = new JLabel("CPF:");
@@ -97,7 +104,7 @@ public class CheckInCliente extends JFrame {
 
 		txtFieldMatricula.setForeground(Color.BLACK);
 		txtFieldMatricula.setBackground(Color.WHITE);
-		txtFieldMatricula.setEditable(true);
+		txtFieldMatricula.setEditable(false);
 		txtFieldMatricula.setColumns(10);
 
 		btnCheckIn.addMouseListener(new MouseAdapter() {

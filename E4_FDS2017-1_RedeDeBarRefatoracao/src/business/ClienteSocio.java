@@ -15,9 +15,14 @@ public class ClienteSocio extends Cliente{
 		super(nome, cpf, idade, genero);	
 		this.numSocio=numSocio;
 	}
+	
+	public ClienteSocio(){
+		super();
+		this.numSocio="";
+	}
 
 	
 	public String toString(){
-		return super.toString()+"numSocio: "+numSocio+"\n";
+		return super.toString()+"/"+numSocio;
 	}
 }
